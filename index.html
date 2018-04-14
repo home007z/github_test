@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zepto</title>
+    <style>
+        #test{width: 200px; height: 100px;line-height:100px; text-align:center;background: red;color: #ffffff}
+    </style>
+
+</head>
+<body>
+<div id="test">zepto</div>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/selector.js"></script>
+<script src="js/fx.js"></script>
+<script src="js/touch.js"></script>
+<script>
+    $(function () {
+        console.log($("#test").width());
+        $("#test").animate({
+            opacity: 0.25, left: '50px',
+            color: '#abcdef',
+            rotateZ: '45deg', translate3d: '0,10px,0'
+        }, 500, 'ease-out',function () {})
+    })
+</script>
+</body>
+</html>
